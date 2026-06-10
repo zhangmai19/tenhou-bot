@@ -1,0 +1,54 @@
+# Tenhou Bot Configuration
+# Edit this file to configure your bot.
+
+[account]
+# Your Tenhou user ID. Use "NoName" for unregistered play.
+user_id = "NoName"
+
+[game]
+# Lobby type:
+#   0 = 一般 (general)
+#   1 = 上級 (upper)
+#   2 = 特上 (superior)
+#   3 = 鳳凰 (phoenix)
+lobby = 0
+
+# Game type:
+#   0 = 東風戦 (east only), with red fives, open tanyao
+#   1 = 東南戦 (east+south), with red fives, open tanyao
+# Full bitmask: bit0=online, bit1=no-aka, bit2=no-open-tanyao, bit3=tonnansen, bit4=three-player
+game_type = 0
+
+# Max games to play (0 = unlimited)
+max_games = 0
+
+# Seconds to wait for matchmaking (0 = wait forever)
+search_timeout_secs = 120
+
+[strategy]
+# Minimum tile acceptance (ukeire) for declaring riichi.
+# 4 means: don't riichi with a bad wait (single tile, edge, etc.)
+min_ukeire_for_riichi = 4
+
+# Allow calling chi/pon? Set to false for menzen-only play.
+allow_melds = true
+
+# When an opponent declares riichi, switch to defensive (fold) mode?
+fold_against_riichi = true
+
+# Weight for tile acceptance count in discard evaluation.
+# Higher = more aggressive (prioritize speed)
+ukeire_weight = 1.0
+
+# Weight for keeping dora tiles.
+# Higher = value dora more, even at cost of shanten
+dora_weight = 0.5
+
+# Penalty for discarding a dangerous tile.
+# Higher = more defensive
+danger_penalty = 3.0
+
+# Minimum shanten improvement needed to call a meld.
+# 2 = only call if it improves shanten by 2 or more
+# 1 = call if it improves by 1 (more aggressive)
+min_shanten_improve_for_meld = 2

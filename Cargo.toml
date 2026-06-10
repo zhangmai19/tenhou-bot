@@ -1,0 +1,28 @@
+[package]
+name = "tenhou-bot"
+version = "0.1.0"
+edition = "2021"
+description = "Automatic Tenhou mahjong AI bot with customizable strategy"
+
+[dependencies]
+# JSON protocol
+serde_json = "1"
+# Config
+toml = "0.8"
+serde = { version = "1", features = ["derive"] }
+# Error handling
+anyhow = "1"
+# Logging
+log = "0.4"
+env_logger = "0.11"
+# CLI
+clap = { version = "4", features = ["derive"] }
+# Random for decision making
+rand = "0.8"
+# WebSocket client — uses native-tls + vendored (bundles OpenSSL, no system deps)
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.26", features = ["native-tls-vendored"] }
+# URL parsing
+url = "2"
+# Future streams
+futures-util = "0.3"

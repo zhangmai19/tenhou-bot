@@ -1,0 +1,11 @@
+/target/
+/node_modules/
+/akagi-app/
+/Akagi/
+*.deb
+*.zip
+__pycache__/
+*.pyc
+/mjai-reviewer/
+*.old
+*.bak
